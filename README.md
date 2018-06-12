@@ -2,6 +2,6 @@
 
 Petit projet RubyonRails on windows /
 test
-
+test2
 
 
