@@ -9,6 +9,14 @@ default: &default
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   timeout: 5000
 
+pg: &pg
+  adapter: postgresql
+  pool: 5
+  timeout: 5000
+  username : root
+  password : root
+  database: db_name
+
 development:
   <<: *default
   database: db/development.sqlite3
@@ -21,5 +29,4 @@ test:
   database: db/test.sqlite3
 
 production:
-  <<: *default
-  database: db/production.sqlite3
+  <<: *pg
